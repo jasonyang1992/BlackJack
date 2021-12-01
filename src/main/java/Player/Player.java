@@ -70,11 +70,7 @@ public class Player {
         // checks if A to be 1 or 11
         for (Card card : hand) {
             if (card.getValue().equalsIgnoreCase("A")) {
-                if (score >= 11) {
-                    score += 1;
-                } else {
-                    score += 11;
-                }
+                score = (score >= 11) ? score + 1 : score + 11;
             }
         }
     }
